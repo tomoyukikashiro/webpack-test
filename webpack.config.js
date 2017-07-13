@@ -17,8 +17,8 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          'style-loader',
-          'css-loader'
+          'style-loader/url',
+          'file-loader?name=[name].[ext]&outputPath=../styles/'
         ]
       }
     ]
