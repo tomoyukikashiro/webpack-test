@@ -6,5 +6,10 @@ module.exports = {
     path: path.resolve(__dirname, 'dist/scripts'),
     filename: 'bundle.js'
   },
-  devtool: 'cheap-module-source-map'
+  devtool: 'cheap-module-source-map',
+  resolve: {
+    alias: {
+      jquery: '../node_modules/jquery/src/jquery.js'
+    }
+  }
 }
