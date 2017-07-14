@@ -1,0 +1,1 @@
+- [] how to manage asserts which is not used in js
