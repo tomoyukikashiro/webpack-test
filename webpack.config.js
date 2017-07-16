@@ -38,5 +38,8 @@ module.exports = {
     }),
     new CleanWebpackPlugin(['dist'])
   ],
+  devServer: {
+    contentBase: './dist'
+  },
   devtool: 'cheap-module-source-map'
-}
+};
