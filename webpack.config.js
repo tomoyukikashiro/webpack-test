@@ -1,4 +1,5 @@
 const path  =  require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
@@ -32,6 +33,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin() ,
     new HtmlWebpackPlugin({
       title: 'Output Management',
       template: 'index.html'
@@ -39,6 +41,7 @@ module.exports = {
     new CleanWebpackPlugin(['dist'])
   ],
   devServer: {
+    hot: true,
     contentBase: './dist'
   },
   devtool: 'cheap-module-source-map'
