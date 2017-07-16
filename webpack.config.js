@@ -1,4 +1,5 @@
 const path  =  require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
@@ -31,6 +32,10 @@ module.exports = {
     ]
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Output Management',
+      template: 'index.html'
+    }),
     new CleanWebpackPlugin(['dist'])
   ],
   devtool: 'cheap-module-source-map'
