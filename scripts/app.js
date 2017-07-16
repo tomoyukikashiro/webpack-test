@@ -7,7 +7,6 @@ import '../styles/main.css';
 
 foo();
 bar();
-const jqueryVersion = $.fn.jquery;
-console.log(`jquery version : ${jqueryVersion}`);
+console.log('jquery version : ' + $.fn.jquery);
 
-$('body').append(`<img src="/${gif}" alt=""/>`);
+$('body').append('<img src="/' + gif + '" alt=""/>');
