@@ -1,10 +1,9 @@
 const path  =  require('path');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-  context: path.resolve(__dirname, './'),
+  context: process.cwd(),
   entry: './scripts/app.js',
   output: {
     path: path.resolve(__dirname, 'dist/'),
@@ -33,16 +32,10 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin() ,
     new HtmlWebpackPlugin({
       title: 'Output Management',
       template: 'index.html'
     }),
     new CleanWebpackPlugin(['dist'])
-  ],
-  devServer: {
-    hot: true,
-    contentBase: './dist'
-  },
-  devtool: 'cheap-module-source-map'
+  ]
 };
