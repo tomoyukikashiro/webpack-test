@@ -15,7 +15,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      jquery: '../node_modules/jquery/src/jquery.js'
+      jquery: '../node_modules/jquery/src/jquery.js',
+      loadash: '../node_modules/lodash/lodash.js'
     }
   },
   module: {
