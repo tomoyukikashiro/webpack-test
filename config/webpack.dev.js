@@ -7,7 +7,7 @@ module.exports = Merge(CommonConfig, {
   module: {
     rules: [
        {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|svg|jpg|gif|webp)$/,
         use: [
           'file-loader?name=[path][name].[ext]'
         ]
