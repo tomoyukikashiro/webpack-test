@@ -9,7 +9,7 @@ foo();
 bar();
 console.log('jquery version : ' + $.fn.jquery);
 
-$('body').append('<img src="/' + gif + '" alt=""/>');
+$('body').append('<img src="' + gif + '" alt=""/>');
 
 function getComponent() {
   return import(/* webpackChunkName: "lodash" */ 'lodash').then(function(_) {
