@@ -10,7 +10,7 @@ module.exports = {
     'lib': './scripts/lib.js'
   },
   output: {
-    path: path.resolve(__dirname, 'dist/'),
+    path: path.resolve(process.cwd(), 'dist/'),
     filename: 'scripts/[name].bundle.js',
     publicPath: '/'
   },
@@ -28,6 +28,10 @@ module.exports = {
           'style-loader',
           'css-loader'
         ]
+      },
+      {
+        test: /\.html$/,
+        use: ['html-loader']
       }
     ]
   },
@@ -39,6 +43,6 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'common'
     }),
-    new CleanWebpackPlugin(['dist'])
+    new CleanWebpackPlugin([path.resolve(process.cwd(), 'dist/')])
   ]
 };
